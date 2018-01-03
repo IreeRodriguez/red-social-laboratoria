@@ -1,0 +1,83 @@
+/*font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Indie Flower', cursive;*/
+
+.container-fluid{
+  background: black;
+}
+.corchea1{
+  position: relative;
+  color:#479be6;
+  padding-top: 3vh;
+
+}
+header{
+  background-image: url(../images/back.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.col-md-offset-6{
+  background: grey;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+#about{
+  background: black;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: center;
+  padding-bottom: 5%;
+}
+img{
+  width:50%;
+  height: 50%;
+}
+.pic{
+  border:2px solid grey;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.mensaje{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: #353333;
+}
+#inf{
+  background-image: url(../images/circulo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position:center;
+  font-family: 'Montserrat', sans-serif
+
+}
+.sed{
+  color:white;
+  background-color: rgba(7, 7, 8, 0.5);
+  opacity: 1.2;
+  z-index: 100%;
+}
+footer{
+  background: grey;
+  color: white;
+  text-align: center;
+  padding: 2%;
+}
+.logo{
+  font-family: 'Sigmar One', cursive;
+}
+.musicaliza {
+    font-size: 628%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-family: 'Sigmar One', cursive;
+}
+.foot{
+  background: grey;
+}
+.ligthblue{
+  color:blue;
+}

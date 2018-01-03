@@ -6,11 +6,133 @@
         <link rel="shortcut icon" href="assets/img/favicon.ico">
         <title>Red Social Laboratoria</title>
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/js/app.js">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato:700|Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     </head>
     <body>
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Musicaliza.cl</a>
+                <i class="fa fa-music corchea1" aria-hidden="true"></i>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Selecciona Perfil</a></li>
+
+                <li><a href="#">Banda</a></li>
+                <li><a href="#">Solita busca Banda</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Inicia Seción</a></li>
+              </ul>
+            </div>
+          </nav>
+            <header>
+              <div class="row">
+                <div class="col-md-offset-6">
+                  <div class="search">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="logo">
+                          <h1 class="musicaliza">Musicalíza</h1>
+
+                        <!--<h3>¿Buscas Banda?</h3>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h3>O quizas...</h3>
+                          </div>
+                        </div>
+                        <h3>¿Mostrar tu Música?</h1>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h3>Si es así, este es tu lugar, pincha <button type="button" class="btn btn-info">Aquí</button> para comenzar</h3>
+                          </div>
+                        </div>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <section id=about>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="mensaje">Vive a través de <a href="#">Musicalíza</a> la experiecia que siempre has buscado</h3>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <h4>Hoy es cuando</h4>
+                        </div>
+                        <div class="col-md-3">
+                          <h4>Atreveté</h4>
+                        </div>
+                        <div class="col-md-3">
+                          <h4>Confía en tu talento</h4>
+                        </div>
+                        <div class="col-md-3">
+                          <h4>Haz tu sueño realidad</h4>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <img src="assets/images/radio.jpg" class="pic">
+                        </div>
+                        <div class="col-md-3">
+                          <img src="assets/images/microfono.jpg" class="pic">
+                        </div>
+                        <div class="col-md-3">
+                          <img src="assets/images/canto.jpg" class="pic">
+                        </div>
+                        <div class="col-md-3">
+                          <img src="assets/images/stage.jpg" class="pic">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id=inf>
+              <div class="row">
+                <div class="col-md-12 sed">
+                  <div class="search">
+                    <div class="row">
+                      <div class="col-md-12 foot">
+                        <h1>¿Buscas Banda?</h1>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h1>O quizas...</h1>
+                          </div>
+                        </div>
+                        <h1>¿Mostrar tu Música?</h1>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h3 class="ligthblue">Si es así, este es tu lugar, pincha <button type="button" class="btn btn-info">Aquí</button> para comenzar</h3>
+                            <h1 class="musicaliza">Musicalíza</h1>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+            </section>
+            <footer>
+              <h5>&copy;copyright 2018</h5>
+            </footer>
+        </div>
+      </div>
 
 
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
         <script>
             // Initialize Firebase
             var config = {
@@ -27,8 +149,9 @@
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
         <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="https://use.fontawesome.com/7873633050.js"></script>
         <script src="assets/js/app.js"></script>
     </body>
 </html>
