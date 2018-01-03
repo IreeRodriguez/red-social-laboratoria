@@ -75,9 +75,17 @@ footer{
     padding-bottom: 6%;
     font-family: 'Sigmar One', cursive;
 }
+.musicaliza2 {
+    font-size: 300%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-family: 'Sigmar One', cursive;
+    text-align: center;
+    padding-left: 15%;
+}
 .foot{
   background: grey;
 }
 .ligthblue{
-  color:blue;
+  color:#f6f6f7;
 }
