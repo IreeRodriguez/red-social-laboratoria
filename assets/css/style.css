@@ -77,11 +77,11 @@ footer{
 }
 .musicaliza2 {
     font-size: 300%;
-    padding-top: 6%;
+    /* padding-top: 6%;
     padding-bottom: 6%;
+    padding-left: 15%; */
     font-family: 'Sigmar One', cursive;
     text-align: center;
-    padding-left: 15%;
     color: #841515;
 }
 .foot{
