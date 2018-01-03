@@ -89,3 +89,15 @@ footer{
 .ligthblue{
   color:#f6f6f7;
 }
+i{
+    margin: 0;
+    padding: 0 !important;
+}
+
+.navbar-brand a{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    margin: 0;
+}

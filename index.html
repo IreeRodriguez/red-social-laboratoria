@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
         <title>Musicaliza</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,30 +12,48 @@
         <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     </head>
     <body>
-      <div class="container-fluid">
-        <div class="row">
-          <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="#">Musicaliza.cl</a>
-                <i class="fa fa-music corchea1" aria-hidden="true"></i>
-              </div>
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Selecciona Perfil</a></li>
-                <li><a href="#">Semillero</a></li>
-                <li><a href="#">Banda</a></li>
-                <li><a href="#">Solita busca Banda</a></li>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
 
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
-                <li><a href="#" id="sign-in"><span class="glyphicon glyphicon-log-in"></span> Inicia Sesión</a></li>
-                <li><button hidden id="sign-out">
-                    Cerrar Sesión
-                </button></li>
-              </ul>
+                            <div class="navbar-brand">
+                                <a href="#">Musicaliza.cl <span>
+                                    <i class="fa fa-music corchea1" aria-hidden="true"></i>
+                                </span></a>
+
+                            </div>
+
+                            <!-- <a class="navbar-brand" href="#">Musicaliza.cl <span>
+                                <i class="fa fa-music corchea1" aria-hidden="true"></i>
+                            </span></a> -->
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Selecciona Perfil</a></li>
+                                <li><a href="#">Semillero</a></li>
+                                <li><a href="#">Banda</a></li>
+                                <li><a href="#">Solita busca Banda</a></li>
+
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+                                <li><a href="#" id="sign-in"><span class="glyphicon glyphicon-log-in"></span> Inicia Sesión</a></li>
+                                <li><button hidden id="sign-out">
+                                    Cerrar Sesión
+                                </button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
-          </nav>
             <header>
               <div class="row">
                 <div class="col-md-offset-6 hidden-sm hidden-xs" >
@@ -131,12 +149,13 @@
               <h5>&copy;copyright 2018</h5>
             </footer>
         </div>
-      </div>
+
 
 
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js">   </script>
         <script src="/__/firebase/init.js"></script>
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://use.fontawesome.com/7873633050.js"></script>
         <script src="assets/js/app.js"></script>
     </body>
