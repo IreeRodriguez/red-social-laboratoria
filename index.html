@@ -38,10 +38,92 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#">Selecciona Perfil</a></li>
-                                <li><a href="#">Semillero</a></li>
-                                <li><a href="#">Banda</a></li>
-                                <li><a href="#">Solita busca Banda</a></li>
-
+                                <li><a href="#" data-toggle="modal" data-target="#solista">Solista Busca</a></li>
+                                  <div class="modal fullscreen-modal fade" id="solista" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	                                 <div class="modal-dialog" role="document">
+	                                      <div class="modal-content">
+	                                         <div class="modal-header">
+	                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                                             <h1 class="modal-title" id="myModalLabel">Solista Busca</h1>
+	                                            </div>
+	                                          <div class="modal-body">
+                                                <h4>¿Tocas algún instrumento?  ¿buscas concretar tu sueño?</h4>
+                                                <p>Tenemos una lista variada de bandas que estan a la espera de un solista como tu, registrate
+                                                   y comienza tu sueño.</p>
+                                                <img src="assets/images/solista.jpg" alt="">
+                                                <h4>Da a conocer tu Talento.</h4>
+	                                           </div>
+	                                           <div class="modal-footer">
+	                                                 <button type="button" class="btn btn-primary">¡Muzicalizaté!</button>
+	                                           </div>
+	                                        </div>
+	                                    </div>
+	                                  </div>
+                                <li><a href="#" data-toggle="modal" data-target="#banda">Banda Buscas</a></li>
+                                  <div class="modal fullscreen-modal fade" id="banda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                   <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                         <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h1 class="modal-title" id="myModalLabel">Banda Busca</h1>
+                                            </div>
+                                          <div class="modal-body">
+                                              <h4>¿Te falta un integrante en la Banda?  ¿Buscas completar el Equipo?</h4>
+                                              <p>Tenemos un montón de solistas a la espera de tocar en una Banda como la tuya, registrate
+                                                 y completa el equipo.</p>
+                                              <img src="assets/images/bandabusca.jpg" alt="">
+                                              <h4>Da a conocer tu Talento.</h4>
+                                           </div>
+                                           <div class="modal-footer">
+                                                 <button type="button" class="btn btn-primary">¡Muzicalizaté!</button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                <li><a href="#" data-toggle="modal" data-target="#muzical">Bandas Muzicalíza</a></li>
+                                  <div class="modal fullscreen-modal fade" id="muzical" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                           <h1 class="modal-title" id="myModalLabel">Bandas Musicalíza</h1>
+                                          </div>
+                                        <div class="modal-body">
+                                            <h4>¿Armaste tu banda con Musicalíza?</h4>
+                                            <p>Esta sección es para ustedes, Puedes tener tu espacio en Musicalíza, subir tracks, tener fans, compartir tus tocatas y eventos</p>
+                                            <h3>Además...</h3>
+                                            <h3>Participa en el festival anual de bandas emergentes de Muzicalíza</h3>
+                                            <img src="assets/images/talento.jpg" alt="">
+                                            <h4>Salta a la Fama</h4>
+                                         </div>
+                                         <div class="modal-footer">
+                                               <button type="button" class="btn btn-primary">¡Muzicalizaté!</button>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <li><a href="#" data-toggle="modal" data-target="#semillero">Semillero</a></li>
+                                  <div class="modal fullscreen-modal fade" id="semillero" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                          <h1 class="modal-title" id="myModalLabel">Semillero</h1>
+                                        </div>
+                                      <div class="modal-body">
+                                          <h4>¿Tu sueño es tocar un Instrumento?¿Tienes ganas de aprender?</h4>
+                                          <p>Te podemos entregar las herramientas que necesitas, tenemos los mejores profesores y grupos para principiantes por:</p>
+                                          <p>Genero,Instrumento Y mucho mas.</p>
+                                          <h3>Concreta tu sueño... Atrevete!</h3>
+                                          <img src="assets/images/semillero.jpg" alt="">
+                                          <h4>Salta a la Fama</h4>
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary">¡Muzicalizaté!</button>
+                                       </div>
+                                    </div>
+                                  </div>
+                                </div>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
@@ -81,30 +163,35 @@
                       <h3 class="mensaje">Vive a través de <a href="#">Musicalíza</a> la experiecia que siempre has buscado</h3>
                       <div class="row">
                         <div class="col-md-3">
-                          <h4>Hoy es cuando</h4>
+                          <a class="fotolink">Solista Busca</a>
+
+                          <!--<h4>Solista Busca</h4>-->
                         </div>
                         <div class="col-md-3">
-                          <h4>Atreveté</h4>
+                          <a class="fotolink">Banda Busca</a>
+                          <!--<h4>Banda Busca</h4>-->
                         </div>
                         <div class="col-md-3">
-                          <h4>Confía en tu talento</h4>
+                          <a class="fotolink">Bandas Muzicalíza</a>
+                          <!--<h4>Bandas Muzicalíza</h4>-->
                         </div>
                         <div class="col-md-3">
-                          <h4>Haz tu sueño realidad</h4>
+                          <a class="fotolink">Semillero</a>
+                          <!--<h4>Semillero</h4>-->
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-3">
-                          <img src="assets/images/radio.jpg" class="pic">
-                        </div>
-                        <div class="col-md-3">
                           <img src="assets/images/microfono.jpg" class="pic">
                         </div>
                         <div class="col-md-3">
-                          <img src="assets/images/canto.jpg" class="pic">
+                          <img src="assets/images/stage.jpg" class="pic">
                         </div>
                         <div class="col-md-3">
-                          <img src="assets/images/stage.jpg" class="pic">
+                          <img src="assets/images/radio.jpg" class="pic">
+                        </div>
+                        <div class="col-md-3">
+                          <img src="assets/images/canto.jpg" class="pic">
                         </div>
                       </div>
                     </div>

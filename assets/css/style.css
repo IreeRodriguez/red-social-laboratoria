@@ -1,6 +1,7 @@
 /*font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
-font-family: 'Indie Flower', cursive;*/
+font-family: 'Indie Flower', cursive;
+color vino #841515*/
 
 .container-fluid{
   background: black;
@@ -37,8 +38,8 @@ img{
 }
 .pic{
   border:2px solid grey;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  /*padding-top: 10%;
+  padding-bottom: 10%;*/
 }
 .mensaje{
   padding-top: 1%;
@@ -101,4 +102,26 @@ i{
 }
 .navbar{
     margin: 0;
+}
+.fotolink{
+  text-decoration: none;
+  color:white;
+  font-size: 120%;
+  font-weight: bolder;
+
+}
+.modal-header {
+    background: grey;
+}
+.modal-body {
+    background: black;
+    color: white;
+    text-align: center;
+}
+.modal-footer {
+    background: grey;
+}
+.btn-primary {
+    background-color: #841515 !important;
+    border-color: #7b0418 !important;
 }
