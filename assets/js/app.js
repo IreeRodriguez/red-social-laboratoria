@@ -10,18 +10,42 @@ function socialNet() {
   this.imageForm = document.getElementById('image-form');
   this.mediaCapture = document.getElementById('mediaCapture');
   this.userPic = document.getElementById('user-pic');
+  this.modalPic = document.getElementById('modal-pic');
   this.userName = document.getElementById('user-name');
+  this.modalName = document.getElementById('modal-name');
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
-  this.feed=document.getElementById('feed');
-  this.about=document.getElementById('about');
-  this.info=document.getElementById('inf');
+  this.feed = document.getElementById('feed');
+  this.about = document.getElementById('about');
+  this.info = document.getElementById('inf');
+  this.instrument = document.getElementById('instrumento');
+  this.genero = document.getElementById('genero');
+  this.age = document.getElementById('age');
+  this.exp = document.getElementById('exp');
+  this.lvlExp = document.getElementById('lvlExp');
+  this.genre = document.getElementById('genre');
+  this.save = document.getElementById('save');
+
+  this.userUid = 0;
+
+  // firebase.auth().onAuthStateChanged((user) => {
+  //   if (user) {
+  //     this.userUid = user.uid;
+  //   }
+  // });
+
+
+
+
 
 
   // Guardar mensajes del input al presionar submit//
   this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
+  this.save.addEventListener('click', this.saveProfile.bind(this));
+
+  this.userName.addEventListener('click', this.loadProfile.bind(this));
 
 
   // subir una imagen en el feed//
@@ -51,15 +75,17 @@ socialNet.prototype.loadMessages = function() {
     // Make sure we remove all previous listeners.
     this.messagesRef.off();
 
+
     // cargar solo los ultimos 12 y escuchar si hay nuevos//
     var setMessage = function(data) {
       var val = data.val();
-      // console.log(val);
+      //console.log(val.name);
       this.displayMessage(data.key, val.name, val.text, val.photoUrl, val.imageUrl);
     }.bind(this);
     this.messagesRef.limitToLast(12).on('child_added', setMessage);
     this.messagesRef.limitToLast(12).on('child_changed', setMessage);
 };
+
 
 //Guardar mensaje nuevo en firebase//
 socialNet.prototype.saveMessage = function(e) {
@@ -82,6 +108,84 @@ socialNet.prototype.saveMessage = function(e) {
      });
   }
 };
+//cargar perfil de usuario
+socialNet.prototype.loadProfile = function(){
+    var profRef = this.database.ref('profile');
+    var profileBody = document.getElementById('profileBody');
+    var modalInfo = document.getElementById('profileInfo');
+    var modalSubmit = document.getElementById('modal-submit');
+    var profileClose = document.getElementById('profileClose');
+    var profileGenero = document.getElementById('profileGenero');
+    var profileInst = document.getElementById('profileInst');
+    var profileAge = document.getElementById('profileAge');
+    var profileExp = document.getElementById('profileExp');
+    var profileLvlExp = document.getElementById('profileLvlExp');
+    var profileGenre = document.getElementById('profileGenre');
+
+        var searchId = function(snapshot) {
+        var obj = snapshot.val();
+
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) {
+
+                if (this.checkSignedInWithMessage()) {
+
+                    if (this.userUid === obj[key].userid) {
+
+                        modalInfo.classList.add('hide');
+                        modalSubmit.classList.add('hide');
+                        profileBody.classList.remove('hide');
+                        profileClose.classList.remove('hide');
+                        profileGenero.innerHTML = obj[key].genero;
+                        profileAge.innerHTML = obj[key].age;
+                        profileInst.innerHTML = obj[key].instrument;
+                        profileExp.innerHTML = obj[key].exp;
+                        profileLvlExp.innerHTML = obj[key].lvlExp;
+                        profileGenre.innerHTML = obj[key].genre;
+                        console.log("Found match!!");
+                        return true;
+                    } else {
+                        console.log('boo');
+                        profileBody.classList.add('hide');
+                        profileClose.classList.add('hide');
+                        modalSubmit.classList.remove('hide');
+                        modalInfo.classList.remove('hide');
+                    }
+                    }
+
+            }
+        }
+    }.bind(this);
+
+    profRef.on("value", searchId);
+
+};
+//guardar profile en firebase
+socialNet.prototype.saveProfile = function(e) {
+    e.preventDefault();
+    console.log('funcion saveprofile activated');
+
+    this.profileRef = this.database.ref('profile');
+
+    this.profileRef.off();
+
+    var currentUser = this.auth.currentUser;
+    console.log(this.instrument.value);
+      console.log(this.userUid);
+
+    this.profileRef.push({
+        name: currentUser.displayName,
+        genero: this.genero.value,
+        age: this.age.value,
+        instrument: this.instrument.value,
+        exp: this.exp.value,
+        lvlExp: this.lvlExp.value,
+        genre: this.genre.value,
+        userid : this.userUid,
+    });
+};
+
+
 
 // Sets URL de la imagen uplodeada con el url de la imagen que ahora esta guardada en firebase storage//
 socialNet.prototype.setImageUrl = function(imageUri, imgElement) {
@@ -153,10 +257,13 @@ socialNet.prototype.onAuthStateChanged = function(user) {
     // se toma el su foto de perfil de google y su nombre//
     var profilePicUrl = user.photoURL;
     var userName = user.displayName;
+    this.userUid = user.uid;
 
     // se coloca nombre y foto en la pagina//
     this.userPic.style.backgroundImage = 'url(' + profilePicUrl + ')';
+    this.modalPic.style.backgroundImage = 'url(' + profilePicUrl + ')';
     this.userName.textContent = userName;
+    this.modalName.textContent = userName;
 
     // se muestra el boton de sign out  y se muestra info del usuario y feed y se oculta el boton de sing in
     this.userName.classList.remove('hide');
@@ -170,6 +277,8 @@ socialNet.prototype.onAuthStateChanged = function(user) {
 
     // se cargan los mensajes de la base de datos//
     this.loadMessages();
+    this.loadProfile();
+
 } else { // si el usuario esta signed out//
     // se oculta boton de sign out e informacion del usuario y feed, se muentra el boton de sign in
     this.userName.classList.add('hide');
@@ -259,6 +368,8 @@ socialNet.prototype.checkSetup = function() {
         'sure you are running the codelab using `firebase serve`');
   }
 };
+
+
 
 window.onload = function() {
   window.friendlyChat = new socialNet();

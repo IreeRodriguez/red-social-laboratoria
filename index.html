@@ -125,8 +125,94 @@
                                     <a hidden id="user-pic"></a>
                                 </li>
                                 <li>
-                                    <a hidden id="user-name"></a>
+                                    <a hidden id="user-name" href="#" data-toggle="modal" data-target="#profile"></a>
                                 </li>
+                                <div class="modal fullscreen-modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h1 class="modal-title" id="myModalLabel">Mi Perfil</h1>
+                                                <div id="modal-pic" class="pic"></div>
+                                                <h2 id="modal-name"></h2>
+                                            </div>
+                                            <div id="profileBody" class="modal-body hide">
+                                                <label for="genero">Género</label>
+                                                <h4 id="profileGenero"></h4>
+                                                <label>Edad</label>
+                                                <h4 id="profileAge"></h4>
+                                                <label>Instrumento</label>
+                                                <h4 id="profileInst"></h4>
+                                                <label>Tiempo de Ejecución</label>
+                                                <h4 id="profileExp"></h4>
+                                                <label>Expertice</label>
+                                                <h4 id="profileLvlExp"></h4>
+                                                <label>Género Musical</label>
+                                                <h4 id="profileGenre"></h4>
+                                            </div>
+                                            <div id="profileClose" class="modal-footer hide">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Ok</button>
+                                            </div>
+                                            <div id="profileInfo" class="modal-body hide">
+                                                <label for="genero">Género</label>
+                                                <select id="genero" class="form-control">
+                                                    <option>Masculino</option>
+                                                    <option>Femenino</option>
+                                                </select>
+                                                <label for="age">Edad</label>
+                                                <select id="age" class="form-control">
+                                                    <option>18-24 años</option>
+                                                    <option>25-29 años</option>
+                                                    <option>30-34 años</option>
+                                                    <option>35-39 años</option>
+                                                    <option>40-44 años</option>
+                                                    <option>45-49 años</option>
+                                                    <option>50 o más años</option>
+                                                </select>
+                                                <label for="instrumento">Instrumento</label>
+                                                <select id="instrumento" class="form-control">
+                                                    <option>Guitarra</option>
+                                                    <option>Bajo</option>
+                                                    <option>Bateria</option>
+                                                    <option>Teclado</option>
+                                                    <option>Canto</option>
+                                                </select>
+                                                <label for="exp">Tiempo de Ejecución</label>
+                                                <select id="exp" class="form-control">
+                                                    <option>0-1 año</option>
+                                                    <option>1-2 años</option>
+                                                    <option>2-3 años</option>
+                                                    <option>3 o más</option>
+                                                </select>
+                                                <label for="lvlExp">Expertice</label>
+                                                <select id="lvlExp" class="form-control">
+                                                    <option>Profesional</option>
+                                                    <option>Intermedio</option>
+                                                    <option>Aficionado</option>
+                                                    <option>Principiante</option>
+                                                </select>
+                                                <label for="genre">Género Musical</label>
+                                                <select id="genre" class="form-control">
+                                                    <option>Rock</option>
+                                                    <option>Reggae</option>
+                                                    <option>Metal</option>
+                                                    <option>Funk</option>
+                                                    <option>Soul</option>
+                                                    <option>Cumbia</option>
+                                                    <option>Folk</option>
+                                                    <option>Blues</option>
+                                                    <option>Rap</option>
+                                                    <option>BossaNova</option>
+                                                    <option>Fusión</option>
+                                                </select>
+                                            </div>
+                                            <div id="modal-submit" class="modal-footer hide">
+                                                <button id="save" type="submit" class="btn btn-primary" class="close" data-dismiss="modal">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <li class="pad">
                                     <button hidden id="sign-out" class="btn btn-default hide btn-primary">Sign-out
                                     </button>

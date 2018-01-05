@@ -135,7 +135,7 @@ input{
     padding-left: 0 !important;
 }
 .pic{
-
+    width: 3em;
     height: 3em;
     border-radius: 100%;
     background-repeat: no-repeat;
@@ -163,4 +163,14 @@ input{
 }
 main{
     padding: 5%;
+}
+#modal-name, #modal-pic{
+    display: inline-block;
+}
+label{
+    margin-top: 1em;
+}
+.name {
+    color: #841515;
+    font-size: 0.8em;
 }
