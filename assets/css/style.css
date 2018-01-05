@@ -36,7 +36,7 @@ img{
   width:50%;
   height: 50%;
 }
-.pic{
+.pict{
   border:2px solid grey;
   /*padding-top: 10%;
   padding-bottom: 10%;*/
@@ -124,4 +124,43 @@ i{
 .btn-primary {
     background-color: #841515 !important;
     border-color: #7b0418 !important;
+}
+.hide {
+    display: none;
+}
+input{
+    width: 100% !important;
+}
+.form-group, .form-inline{
+    padding-left: 0 !important;
+}
+.pic{
+
+    height: 3em;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.spacing {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+
+}
+.message-container {
+    border-bottom: 0.1em solid lightgray;
+    margin: 1em 0;
+}
+#user-pic{
+    width:2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    background-size: cover;
+}
+.pad{
+    padding-top: 0.8em !important;
+}
+main{
+    padding: 5%;
 }
